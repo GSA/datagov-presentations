@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>Data.gov</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" media="screen" href="core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/style/swiss.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="core/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="modernizr.custom.js"></script>
+</head>
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+
+    <section class="slide">
+        <div class="center">
+          <h2 class="title-slide">Open &amp; Structured Data<h2>
+          <h3>Open &amp; Structured Content Models Workshop</h3>
+          <h4>Phil Ashlock, Data.gov</h4>
+        </div>
+    </section>
+
+
+    <section class="slide">
+      <h1>Data.gov<h1>
+    </section>
+
+    <section class="slide">
+      <img src="./images/datagov-presentation.png" alt="data.gov screenshot">
+    </section>
+
+    <section class="slide">
+      <h2>Data.gov</h2>
+        <ul>
+          <li><a href="https://catalog.data.gov">Catalog</a></li>
+          <li><a href="https://www.data.gov">Topics</a></li>
+          <li><a href="http://www.data.gov/developers/apis">API</a> &amp; faceted search</li>                    
+          <li><a href="https://github.com/gsa/data.gov/issues">Github</a></li>          
+        </ul>       
+    </section>
+
+
+   <section class="slide">
+      <h2>Process</h2>
+      <h3>Agency &rarr; Project Open Data &rarr; Data.gov</h3>
+    </section>
+
+
+    <section class="slide">
+      <img src="./images/before-after.png" alt="data.gov screenshot">
+    </section>
+
+     <section class="slide">
+      <h1>Agencies<h1>
+    </section>    
+
+    <section class="slide">
+      <h2>Agency data management</h2>
+        <p>Range of solutions</p>
+        <ul>
+          <li>CKAN</li>
+          <li>Hosted - inventory.data.gov</li>
+          <li>Socrata</li>
+          <li>Homegrown</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+      <h1>Project Open Data<h1>
+    </section>
+
+    <section class="slide">
+      <h2>Project Open Data</h2>
+        <ul>
+          <li><a href="https://project-open-data.cio.gov/policy-memo/">Policy</a></li>
+          <li><a href="http://labs.data.gov/dashboard">Dashboard</a></li>
+          <li><a href="https://project-open-data.cio.gov/implementation-guide/">Implementation Guide</li>
+          <li><a href="https://project-open-data.cio.gov/schema/">Data.json Schema</li>
+          <li><a href="https://github.com/project-open-data/project-open-data.github.io/issues">Github</a></li>
+        </ul>      
+    </section>
+
+
+    <section class="slide">
+      <img src="./images/pod-schema.png" alt="data.gov screenshot">
+    </section>
+
+   <section class="slide">
+      <img src="./images/datagov-search.png" alt="data.gov screenshot">
+    </section>
+
+   <section class="slide">
+      <img src="./images/world.svg" alt="data.gov screenshot">
+    </section>
+
+    <section class="slide">
+      <h1>Schema.org<h1>
+    </section>
+
+    <section class="slide">
+      <img src="./images/schema-org.png" alt="Schema.org">
+    </section>
+
+    <section class="slide">
+      <h1>Webmaster Tools<h1>
+    </section>
+
+
+    <section class="slide">
+      <img src="./images/webmaster-tools1.png" alt="Webmaster Tools">
+    </section>
+
+
+    <section class="slide">
+      <img src="./images/webmaster-tools2.png" alt="Webmaster Tools">
+    </section>
+
+
+      <section class="slide">
+      <img src="./images/webmaster-tools3.png" alt="Webmaster Tools">
+    </section>
+    
+
+        <section class="slide">
+      <img src="./images/webmaster-tools4.png" alt="Webmaster Tools">
+    </section>  
+
+
+    <section class="slide">
+      <h1>Structured Metadata <br> &#10003;</h1>      
+    </section>
+
+    <section class="slide">
+      <h1>Structured Data <br> ?</h1>      
+    </section>
+
+    <section class="slide">
+      <img src="./images/datastore.png" alt="Data.gov screenshot">
+    </section>  
+
+
+
+    <section class="slide">
+      <h2>Structured in lots of ways</h2>
+        <ul>
+          <li>Multitude of formats</li>
+          <li>Each format can provide a wide range of possible structures</li>
+          <li>Many ways to provide schemas and data dictionaries</li>
+          <li>No common approach to elaborate on the structure of a spreadsheet</li>
+        </ul>
+    </section>
+
+
+  <section class="slide">
+      <img src="./images/json-schema.png" alt="Data.gov screenshot">
+    </section>  
+
+    <section class="slide">
+      <h2>Reference Data Structure from Metadata</h2>
+      <p>Proposed new fields in <a href="https://github.com/project-open-data/project-open-data.github.io/labels/schema%20v1.1">Project Open Data schema update</a></p>
+        <ul>
+          <li><strong>conformsTo</strong> - reference established data standard</li>
+          <li><strong>describedBy</strong> - reference machine readable schema</li>
+          <li><strong>describedByType</strong> - specify type of schema</li>
+        </ul>
+    </section>
+
+
+    <section class="slide">
+      <img src="./images/tdp.png" alt="Data.gov screenshot">
+    </section>  
+
+    <section class="slide">
+      <h1>Updates to Data.gov</h1>      
+    </section>
+
+    <section class="slide">
+      <h1>Questions?</h1>      
+    </section>
+              
+
+    <section class="slide">
+      <h2>Hack this presentation!</h2>
+        <ul>
+          <li>View online: <a href="http://gsa.github.io/datagov-presentations/OSCM/">http://gsa.github.io/datagov-presentations/OSCM/</a></li>
+          <li>Github: <a href="https://github.com/gsa/datagov-presentations/tree/gh-pages">Submit pull requests / Add issues</a></li>          
+        </ul>      
+    </section>
+
+
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="jquery.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>
