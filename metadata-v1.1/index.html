@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>Data.gov</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" media="screen" href="core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/style/swiss.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="core/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="modernizr.custom.js"></script>
+</head>
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+
+    <section class="slide">
+      <h1>Project Open Data Metadata v 1.1 Updates<h1>
+    </section>
+
+    <section class="slide">
+      <img src="./images/metadatachangelog.png" alt="changelog screenshot">
+    </section>
+
+
+    <section class="slide">
+      <h2>Resources</h2>
+          <li><a href=http://project-open-data.civicagency.org/metadata-changelog/>Changelog for the version 1.1 metadata schema</a>.</li>
+          <li><a href=http://project-open-data.civicagency.org/v1.1/schema/>Preview of the new updated metadata schema page</a>.</li>
+          <li><a href=https://gist.github.com/philipashlock/21ff607527863fba200b>Example data.json file with the version 1.1 schema</a>.</li>
+          <li>Metadata schema updates have been managed through <a href=https://github.com/project-open-data/project-open-data.github.io/milestones/Next%20Version%20of%20Common%20Core%20Metadata%20Schema%20(1.0%20-%3E%201.1.)>issues in a single milestone</a>. Each issue within the milestone contains the related discussion and a link to the proposed edits.</li>
+          <li>The proposed edits can also be found bundled in <a href=https://github.com/project-open-data/project-open-data.github.io/pull/357>this combined pull request</a>.</li>
+    </section>
+
+    <section class="slide">
+      <h1>Tenative Timeline for Metadata Schema v 1.1 Updates<h1>
+        <li>Propose that agencies begin using new schema - December 1, 2015</i>
+        <li>Agencies should have migrated to new schema - Feb 1, 2015</i>
+    </section>    
+
+    <section class="slide">
+      <h2>Reasons for Metadata Schema Updates!</h2>
+          <li>To better align with DCAT</li>
+          <li>Reduce confusion and ambiguity</li>
+          <li>Updated and more specific notes</li>
+          <li>Options for advanced users </li>
+    </section>
+
+  <section class="slide">
+      <h1>New Hierarchy<h1>
+    </section>
+
+    <section class="slide">
+      <h2>1/5 Data Catalog Fields</h2>
+        <ul>
+          <li>Adds required conformsTo field to specify the schema version (#309)</li>
+          <li>Adds required dataset field as a container for all datasets listed (#309)</li>
+          <li>Adds optional describedBy field to specify a canonical or customized JSON schema file (#309, #332)</li>
+        </ul>      
+    </section>
+
+    <section class="slide">
+      <h1>2/5 Dataset Required Fields</h1>
+      <ul>Changes contactPoint field to an object that contains the name (fn) and email address (hasEmail) (#358)</li>
+        <li>Adds fn field as part of contactPoint replacing earlier use of contactPoint (#358)</li>
+        <li>Renames mbox field to hasEmail and moves to within contactPoint (#358)</li>
+      </ul>
+      <ul>Changes publisher field to an object that allows multiple levels of organizations (#296)</li>
+       <li>Adds name as part of publisher replacing earlier use of publisher (#296)</li>
+       <li>Adds optional subOrganizationOf field as part of publisher to include parent organization hierarchy (#296)</li>
+      </ul>
+      </section>
+
+    <section class="slide">
+      <h2>3/5 Dataset Required-if-Applicable Fields</h2>
+      <li>Removes webService field. APIs can be described within a distribution using accessURL and format (#291)</li>
+      <li>Renames accessLevelComment field to rights (#353)</li>
+      <li>Changes license field to be a URL (196)</li>
+      <li>Changes distribution field to become required-if-applicable and to always contain the accessURL or downloadURL fields (#217)</li>    
+    </section>
+
+    <section class="slide">
+      <h1>4/5 Distribution Fields</h1>
+      <li>Adds required-if-applicable downloadURL field to replace earlier use of accessURL and to exist as a field within distribution (#335)</li>
+      <li>Adds required-if-applicable mediaType field to replace earlier use of format and to exist as a field within distribution (#272)</li>
+      <li>Changes accessURL field to represent indirect access and to exist only as an optional field within distribution (#217, #335)</li>
+      <li>Changes format field to a human readable description and to exist only as an optional field within distribution (#272, #293)</li>
+      <li>Adds optional description field for use within distribution (#248)</li>
+      <li>Adds optional describedBy field to specify a distribution specific data dictionary (#291, #332)</li>
+      <li>Adds optional describedByType field to specify the format of the data dictionary referenced with describedBy (#291, #332)</li>
+      <li>Adds optional conformsTo field to specify a standard the distribution conforms to (#362)</li>
+    </section>
+
+    <section class="slide">
+      <h2>See Metadata How Metadata Schema v 1.1 maps over</h2>
+          <li>add image</i>
+    </section> 
+
+    <section class="slide">
+      <h2>Tools will be updated to help you</h2>
+      <ul>
+          <li>The Project Open Data Dashboard</li>
+          <li>Inventory.data.gov</li>
+          <li>Ready for testing by December 1st!</li>
+      </ul>
+
+    <section class="slide">
+      <h2>Let us help you!</h2>
+      <ul>
+          <li>Schedule a time to meet with us</li>
+          <li>Let's walk through the process</li>
+          <li>Look at your metadata</li>
+      </ul>
+
+    </section>
+
+
+    <section class="slide">
+      <h2>Hack this presentation</h2>
+        <ul>
+          <li>View online: <a href="http://gsa.github.io/datagov-presentations/metadata-v1.1/">http://gsa.github.io/datagov-presentations/metadata-v1.1/</a></li>
+          <li>Github: <a href="https://github.com/gsa/datagov-presentations/tree/gh-pages">Submit pull requests / Add issues</a></li>          
+        </ul>      
+    </section>
+
+    <section class="slide">
+      <h2>Q&A</h2>
+        <ul>
+          <li>philip.ashlock@gsa.gov</li>
+          <li>rebecca.williams@gsa.gov<li>     
+    </section>
+
+
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="jquery.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>
