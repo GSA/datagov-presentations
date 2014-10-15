@@ -46,7 +46,7 @@
       <img src="./images/projectopendata.png" alt="project open data screenshot">
       <ul>
         <li>The Project Open Data metadata schema is required under the Open Data Policy (OMB M-13-13) and powers Data.gov</li>
-        <li><a href="https://project-open-data.github.io/">Project Open Data</a></li>
+        <li>Learn more at <a href="https://project-open-data.github.io/">Project Open Data</a>.</li>
       </ul>
     </section> 
 
@@ -102,12 +102,11 @@
 
 
     <section class="slide">
-      <h2>Data Catalog Fields</h2>
-      screenshot of catalog fields
+      <h2>New Data Catalog Fields</h2>
       <ul>
-        <li><strong>conformsTo</strong></li>
-        <li><strong>dataset</strong></li>
-        <li>describedBy</li>
+        <li>Adds required <strong>'conformsTo'</strong> field to specify the schema version</li>
+        <li>Adds required <strong>'dataset'</strong> field as a container for all datasets listed</li>
+        <li>Adds optional 'describedBy' field to specify a canonical or customized JSON schema file describedBy</li>
         <li><a href=http://project-open-data.civicagency.org/v1.1/schema/>Preview of the new updated metadata schema page</a>.</li>    
       </ul>    
     </section>
@@ -119,19 +118,18 @@
 
     <section class="slide">
       <h2>Dataset Required Field Changes</h2>
-      <img src="./images/DataRequiredFields.png" alt="data required screenshot">
       <ul>
-        <li>Changes contactPoint field to an object that contains:
+        <li>Changes <strong>'contactPoint'</strong> field to an object that contains the name ('fn') and email address ('hasEmail'):
           <ul>
-            <li>the name (fn) and</li>
-            <li>email address (hasEmail)</li>
+            <li>Adds required <strong>'fn'</strong> field as part of 'contactPoint' replacing earlier use of 'contactPoint'</li>
+            <li>Renames required <strong>'mbox'</strong> field to 'hasEmail' and moves to within 'contactPoint'</li>
           </ul>
         </li>
         <li>
-          Changes publisher field to an object that can contain multiple levels of organizations:
+          Changes required <strong>'publisher'</strong> field to an object that allows multiple levels of organizations:
           <ul>
-            <li>name</li>
-            <li>optional: subOrganizationOf</li>
+            <li>Adds required <strong>'name'</strong> as part of 'publisher' replacing earlier use of publisher</li>
+            <li>Adds optional 'subOrganizationOf' field as part of 'publisher' to include parent organization hierarchy</li>
           </ul>
         </li>
         <li><a href="http://project-open-data.civicagency.org/v1.1/schema/">Preview of the new updated metadata schema page</a>.</li> 
@@ -145,10 +143,10 @@
     <section class="slide">
       <h2>Dataset Required-if-Applicable Field Changes</h2>
       <ul>
-        <li>Removes webService</li>
-        <li>Renames accessLevelComment field to rights</li>
-        <li>Changes license field to be a URL</li>
-        <li>Changes distribution field to become required-if-applicable and to always contain the accessURL or downloadURL fields (#217)</li>
+        <li>Removes 'webService' field. APIs can be described within a 'distribution' using 'accessURL' and 'format'</li>
+        <li>Renames 'accessLevelComment' field to 'rights'</li>
+        <li>Changes 'license' field to be a URL</li>
+        <li>Changes 'distribution' field to become required-if-applicable and to always contain the 'accessURL' or 'downloadURL' fields</li>
         <li><a href=http://project-open-data.civicagency.org/v1.1/schema/>Preview of the new updated metadata schema page</a>.</li>    
       </ul>
     </section>
@@ -160,14 +158,14 @@
     <section class="slide">
       <h2>New Distribution Fields</h2>
       <ul>
-        <li>Adds required-if-applicable downloadURL field to replace earlier use of accessURL</li>
-        <li>Adds required-if-applicable mediaType field to replace earlier use of format</li>
-        <li>Changes accessURL field to represent indirect access and to exist only as an optional field</li>
-        <li>Changes format field to a human readable description and to exist only as an optional field</li>
-        <li>Adds optional description field</li>
-        <li>Adds optional describedBy field</li>
-        <li>Adds optional describedByType field</li>
-        <li>Adds optional conformsTo field</li>
+        <li>Adds required-if-applicable 'downloadURL' field to replace earlier use of 'accessURL'</li>
+        <li>Adds required-if-applicable 'mediaType' field to replace earlier use of 'format'</li>
+        <li>Changes 'accessURL' field to represent indirect access and to exist only as an optional field</li>
+        <li>Changes 'format' field to a human readable description and to exist only as an optional field</li>
+        <li>Adds optional 'description' field</li>
+        <li>Adds optional 'describedBy' field</li>
+        <li>Adds optional 'describedByType' field</li>
+        <li>Adds optional 'conformsTo' field</li>
         <li><a href=http://project-open-data.civicagency.org/v1.1/schema/>Preview of the new updated metadata schema page</a>.</li> 
       </ul>
     </section>
@@ -176,11 +174,11 @@
       <h2>Expanded Field Changes</h2>
       Image Here
       <ul>
-        <li>Changes accrualPeriodicity field to use ISO 8601 date syntax (#292)</li>
-        <li>Renames PrimaryITInvestmentUII field to primaryITInvestmentUII</li>
-        <li>Renames dataDictionary field to describedBy</li>
+        <li>Changes 'accrualPeriodicity; field to use ISO 8601 date syntax (#292)</li>
+        <li>Renames 'PrimaryITInvestmentUII' field to 'primaryITInvestmentUII'</li>
+        <li>Renames 'dataDictionary' field to 'describedBy'</li>
         <li>Adds 'conformsTo' (optional)</li>
-        <li>Adds isPartOf (optional)</li>
+        <li>Adds 'isPartOf' (optional)</li>
         <li><a href=http://project-open-data.civicagency.org/v1.1/schema/>Preview of the new updated metadata schema page</a>.</li> 
       </ul>       
     </section> 
