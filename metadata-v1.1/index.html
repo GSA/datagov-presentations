@@ -112,14 +112,14 @@
     </section>
 
     <section class="slide">
-     <img src="./images/DatasetUpdates.png" alt="datasetupdates screenshot" style="width:100%">
+     <img src="./images/DatasetRequiredUpdates.png" alt="datasetupdates screenshot" style="width:100%">
     </section> 
-         
+
 
     <section class="slide">
       <h2>Dataset Required Field Changes</h2>
       <ul>
-        <li>Changes <strong>'contactPoint'</strong> field to an object that contains the name ('fn') and email address ('hasEmail'):
+        <li>Changes required <strong>'contactPoint'</strong> field to an object that contains the name ('fn') and email address ('hasEmail'):
           <ul>
             <li>Adds required <strong>'fn'</strong> field as part of 'contactPoint' replacing earlier use of 'contactPoint'</li>
             <li>Renames required <strong>'mbox'</strong> field to 'hasEmail' and moves to within 'contactPoint'</li>
@@ -137,13 +137,13 @@
       </section>
 
     <section class="slide">
-     <img src="./images/DatasetUpdates.png" alt="datasetupdates screenshot" style="width:100%">
+     <img src="./images/DatasetRequiredifApplicableUpdates.png" alt="datasetupdates screenshot" style="width:100%">
     </section> 
 
     <section class="slide">
       <h2>Dataset Required-if-Applicable Field Changes</h2>
       <ul>
-        <li>Removes 'webService' field. APIs can be described within a 'distribution' using 'accessURL' and 'format'</li>
+        <li>Removes 'webService' field, APIs can be described within a 'distribution' using 'accessURL' and 'format'</li>
         <li>Renames 'accessLevelComment' field to 'rights'</li>
         <li>Changes 'license' field to be a URL</li>
         <li>Changes 'distribution' field to become required-if-applicable and to always contain the 'accessURL' or 'downloadURL' fields</li>
@@ -169,6 +169,10 @@
         <li><a href=http://project-open-data.civicagency.org/v1.1/schema/>Preview of the new updated metadata schema page</a>.</li> 
       </ul>
     </section>
+
+    <section class="slide">
+      <img src="./images/ExpandedFieldsUpdate.png" alt="data distribution screenshot">
+    </section> 
 
     <section class="slide">
       <h2>Expanded Field Changes</h2>
