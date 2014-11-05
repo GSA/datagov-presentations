@@ -47,15 +47,16 @@
       <p>Today we will discuss:</p>
       <ul>
         <li>History</li>
-        <li>The Data.gov Pipeline</li>
-        <li>Step 1: Organize your open data for the Data.gov Pipeline</li>
-        <ul>
-          <li>Federal Project Open Data requirements</li>
-          <li>GeoPlatform.gov requirements</li>
-          <li>Non-Federal requirements</li>
-        </ul>
-        <li>Step 2: Coordinate with the Data.gov Team</li> 
-        <li>Ready? Contact the Data.gov team today.</li>
+        <li>The Data.gov Harvesting Model</li>
+        <li>Harvest Source Types
+          <ul>
+            <li>Federal Data with Project Open Data</li>
+            <li>Federal Geospatial Data</li>
+            <li>Non-Federal Data</li>
+          </ul>
+        </li>
+        <li>Coordinate with the Data.gov Team</li> 
+        <li>Ready? Contact the Data.gov team today</li>
         <li>Resources</li> 
       </ul>
     </section> 
@@ -67,32 +68,33 @@
     </section>  
 
     <section class="slide">
-      <h2>The Data.gov Pipeline</h2>
+      <h2>The Data.gov Harvesting Model</h2>
       <ul>
         <li>Data.gov is primarily a federal open government data site. State, local, or tribal governments can have metadata about their open data resources incorporated into Data.gov for greater discoverability. </li>
       </ul>
     </section> 
 
     <section class="slide">
-      <h1>Step 1</h1>
+      <h1>Harvest Source Types</h1>
     </section>  
 
     <section class="slide">
-      <h2>Step 1: Organize your open data for the Data.gov Pipeline</h2>
-      <li>Getting your data source ready for harvesting by the Data.gov catalog differs depending on the type of source. The most common sources are the enterprise data inventories, in the JSON format,) that points to all of the datasets they would like listed on Data.gov using a standard metadata schema (Project Open Data). The required metadata schema is based on the federal Open Data Policy and is required of all Federal CFO-Act agencies per OMB M-13-13.</li>
+      <h2>Harvest Source Types</h2>
+    
       <ul>
-        <li>Federal Project Open Data requirements</li>
-        <li>GeoPlatform.gov requirements</li>
-        <li>Non-Federal requirements</li>
+          <li>Federal Data with Project Open Data</li>
+          <li>Federal Geospatial Data</li>
+          <li>Non-Federal Data</li>
       </ul>
     </section>   
 
 
     <section class="slide">
-      <h2>Federal Project Open Data format and metadata requirements</h2>
+      <h2>Federal Data with Project Open Data</h2>
       <ul>
         <li>The Open Data Policy requires agencies to list and describe all agency data that can be made publicly available (i.e. there are no valid restrictions to release) in a publicly available open data catalog with required metadata. Agencies must provide a human readable public data listing at ____.gov/data and a machine readable listing, as a standalone JSON file on the agency’s website at “______.gov/data.json” This data.json file is what gets harvested by the Data.gov catalog.</li>
         <li>See more information at Data Requirements</li>
+      </ul>
     </section>      
 
 
@@ -105,16 +107,11 @@
     </section> 
 
     <section class="slide">
-      <h1>Federal Geospatial data format and metadata requirements</h1>
+      <h1>Federal Geospatial Data</h1>      
     </section>  
 
     <section class="slide">
-      <h1>Insert Geo Diagram</h1>
-    </section>
-
-    <section class="slide">
-      <h2>Federal Geospatial data format and metadata requirements</h2>
-      <li>Background</li>
+      <h2>Federal Geospatial Data</h2>      
       <ul>
         <li>Executive Order 12906 and OMB Circular A-16, revised (2002)</li>
         <li>The FGDC has endorsed <a href="http://www.fgdc.gov/metadata/geospatial-metadata-standards">several geospatial metadata standards</a>, as directed by OMB Circular A-119, such as the Content Standard for Digital Geospatial Metadata (CSDGM), ISO 19115:2003 Geographic Information – Metadata</li>
@@ -123,16 +120,12 @@
     </section>
 
     <section class="slide">
-      <h2>Enterprise Data Inventory Requirements</h2>
-      <ul>
-        <li>All CFO-Act agencies must provide an Enterprise Data Inventory and Public Data Listing in accordance with the Project Open Data metadata schema for the purposes of measuring compliance with OMB’s M-13-13. This includes geospatial and non-spatial data. For more information, see Federal Project Open Data format and metadata requirements above.</li>
-        <li>Required: Enterprise Data Inventory provided to OMB Max</li>
-        <li>Required: Public Data Listing at https://________.gov/data.json</li> 
-      </ul>    
+      <h1>Insert Geo Diagram</h1>
     </section>
 
+
     <section class="slide">
-      <h2>Geospatial Harvest Source -- Public Data Listing Requirements (for GeoPlatform.gov and Data.gov)</h2>
+      <h2>Geospatial Harvest Source</h2>
       <ul>
         <li>Lastly, to prevent duplication on Data.gov, all agencies that provide a CSW geospatial harvest source to GeoPlatform.gov and Data.gov, should create an additional JSON file (called /data-nonspatial-harvest.json) to include all datasets that are not available via the consolidated Geospatial Harvest Source.</li>
         <li>Required: Datasets without a Geospatial Harvest Source for the Public Data Listing at https://________.gov/data-nonspatial-harvest.json</li>
@@ -141,23 +134,20 @@
     </section>
 
     <section class="slide">
-      <h2>Data without a Geospatial Harvest Source -- Public Data Listing Requirements</h2>
+      <h2>Data without a Geospatial Harvest Source</h2>
       <ul>
         <li>GeoPlatform.gov and Data.gov): To be successfully harvested by GeoPlatform.gov and Data.gov, all geospatial data should be provided via one Catalog Service for the Web (CSW) endpoint.</li>
         <li>Required: A CSW endpoint, e.g.: "https://data.doi.gov/csw?service=CSW&version=2.0.2&request=GetCapabilities"</li>
       </ul>    
     </section>
 
-    <section class="slide">
-      <h1>Insert Geo Diagram</h1>
-    </section>
 
     <section class="slide">
-      <h1>Non-Federal format and metadata requirements</h1>
+      <h1>Non-Federal Data</h1>
     </section>  
 
     <section class="slide">
-      <h2>Non-Federal format and metadata requirements</h2>
+      <h2>Non-Federal Data</h2>
       <ul>
         <li>For non-federal sources, federal-specific fields are not required (bureauCode, programCode, dataQuality, primaryITInvestmentUII, and systemOfRecords) as described in the USG note on the schema documentation.</li>
         <li>The other Common Core Required and Required if Applicable fields are required, but some fields can be left out on a case-by-case basis in consultation with the Data.gov team, if the source cannot provide that particular field.</li> 
@@ -166,11 +156,11 @@
     </section> 
 
     <section class="slide">
-      <h1>Step 2</h1>
+      <h1>Coordinate with Data.gov</h1>
     </section>  
 
     <section class="slide">
-      <h2>Step 2: Coordinate with Data.gov</h2>
+      <h2>Coordinate with Data.gov</h2>
       <ul>
         <li>Contact the Data.gov team. Contact the Data.gov team to let them know you’d like to get started. Please include a link to your metadata in the data.json format (see Step 1: Organize your open data for the Data.gov Pipeline) or questions about how to create a data.json file from your current database along with any relevant links.</li> 
         <li>Connecting the pipes. The Data.gov team will create a new Harvest Source that will automatically collect information about your datasets and update Data.gov whenever changes are made on your data catalog. Depending on your platform, creating this harvester might just be the push of a button or it could take a little more work, but the team will walk you through it in any case.</li> 
