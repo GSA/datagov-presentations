@@ -70,9 +70,18 @@
     <section class="slide">
       <h2>The Data.gov Harvesting Model</h2>
       <ul>
-        <li>Data.gov is primarily a federal open government data site. State, local, or tribal governments can have metadata about their open data resources incorporated into Data.gov for greater discoverability. </li>
+        <li>Data.gov does not host data, it simply aggregates metadata</li>        
+        <li>Data.gov pulls metadata from harvest sources and synchronizes them to catalog.data.gov</li>
+        <li>Data.gov is not used to make changes to metadata</li>
+        <li>All changes to metadata are made at the harvest source rather than at data.gov</li>
+        <li>If a metadata record is no longer listed by the harvest source is will be deleted on catalog.data.gov during the next harvest job</li>
+        <li>Most harvest sources on catalog.data.gov are synchronized every 24 hours</li>
       </ul>
     </section> 
+
+    <section class="slide">
+      <img src="images/harvest-model-general.png" alt="harvesting diagram">
+    </section>    
 
     <section class="slide">
       <h1>Harvest Source Types</h1>
@@ -92,23 +101,13 @@
     <section class="slide">
       <h2>Federal Data with Project Open Data</h2>
       <ul>
-        <li>The Open Data Policy requires agencies to list and describe all agency data that can be made publicly available (i.e. there are no valid restrictions to release) in a publicly available open data catalog with required metadata. Agencies must provide a human readable public data listing at ____.gov/data and a machine readable listing, as a standalone JSON file on the agency’s website at “______.gov/data.json” This data.json file is what gets harvested by the Data.gov catalog.</li>
-        <li>See more information at Data Requirements</li>
+        <li>The Open Data Policy requires agencies to list and describe all data that can be made publicly available through a data.json file hosted on their website at agency.gov/data.json</li>
+        <li>The data.json file must validate as JSON in order to be harvested by Data.gov</li>
+        <li>The data.json file must follow the metadata schema and minimum requirements defined by Project Open Data.</li>
+        <li>Each record listed in the data.json file must meet the metadata requirements to be harvested by data.gov, but an invalid record doesn't prevent valid records from being harvested</li>
       </ul>
     </section>      
 
-
-    <section class="slide">
-      <h1>Slide about PDL?</h1>
-    </section> 
-
-    <section class="slide">
-      <h1>Slide about tools like Inventory?</h1>
-    </section> 
-
-    <section class="slide">
-      <h1>Federal Geospatial Data</h1>      
-    </section>  
 
     <section class="slide">
       <h2>Federal Geospatial Data</h2>      
@@ -120,24 +119,15 @@
     </section>
 
     <section class="slide">
-      <h1>Insert Geo Diagram</h1>
+      <img src="images/harvest-diagram.png" alt="harvesting diagram">
     </section>
-
 
     <section class="slide">
       <h2>Geospatial Harvest Source</h2>
       <ul>
-        <li>Lastly, to prevent duplication on Data.gov, all agencies that provide a CSW geospatial harvest source to GeoPlatform.gov and Data.gov, should create an additional JSON file (called /data-nonspatial-harvest.json) to include all datasets that are not available via the consolidated Geospatial Harvest Source.</li>
-        <li>Required: Datasets without a Geospatial Harvest Source for the Public Data Listing at https://________.gov/data-nonspatial-harvest.json</li>
-        <li>Note: If an agency has a geospatial dataset in the data-nonspatial-harvest.json that should be part of geoplatform.gov but is not included in the CSW harvest source, it should be include “geospatial” as a value for the “theme” field.</li>
-      </ul>    
-    </section>
-
-    <section class="slide">
-      <h2>Data without a Geospatial Harvest Source</h2>
-      <ul>
-        <li>GeoPlatform.gov and Data.gov): To be successfully harvested by GeoPlatform.gov and Data.gov, all geospatial data should be provided via one Catalog Service for the Web (CSW) endpoint.</li>
-        <li>Required: A CSW endpoint, e.g.: "https://data.doi.gov/csw?service=CSW&version=2.0.2&request=GetCapabilities"</li>
+        <li>Geospatial metadata should be provided through a consolidated geospatial harvest source, preferably a single CSW endpoint for the entire department</li>
+        <li>Any metadata that is not made available through this geospatial harvest source should be made available a a JSON file. This should be separate from the main data.json file and not include any datasets provided through the geospatial harvest source. This file should be made available at data.gov/data-nonspatial-harvest.json</li>
+        <li>If an agency has a geospatial dataset in the data-nonspatial-harvest.json that should be part of geoplatform.gov but is not included in the CSW harvest source, it should be include “geospatial” as a value for the “theme” field.</li>
       </ul>    
     </section>
 
