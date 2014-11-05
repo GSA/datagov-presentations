@@ -108,27 +108,36 @@
       </ul>
     </section>      
 
+    <section class="slide">
+      <h1>Test &amp; Validate</h1>
+    </section> 
+
 
     <section class="slide">
       <h2>Federal Geospatial Data</h2>      
       <ul>
         <li>Executive Order 12906 and OMB Circular A-16, revised (2002)</li>
-        <li>The FGDC has endorsed <a href="http://www.fgdc.gov/metadata/geospatial-metadata-standards">several geospatial metadata standards</a>, as directed by OMB Circular A-119, such as the Content Standard for Digital Geospatial Metadata (CSDGM), ISO 19115:2003 Geographic Information – Metadata</li>
+        <li>The FGDC has endorsed <a href="http://www.fgdc.gov/metadata/geospatial-metadata-standards">several geospatial metadata standards</a>, as directed by OMB Circular A-119, such as the Content Standard for Digital Geospatial Metadata (CSDGM) and ISO 19115:2003. ISO is recommended.</li>
         <li>GeoPlatform.gov and Data.gov</li>
       </ul>
     </section>
 
     <section class="slide">
-      <img src="images/harvest-diagram.png" alt="harvesting diagram">
+      <h2>Geospatial Harvest Sources</h2>
+      <ul>
+        <li>Geospatial metadata should be provided through a consolidated geospatial harvest source, preferably a single CSW endpoint for the entire department. All of this metadata will also be published to GeoPlatform.gov</li>
+        <li>Any metadata that is not made available through this geospatial harvest source should be made available as a JSON file. This should be separate from the main data.json file and not include any datasets provided through the geospatial harvest source. This file should be made available at data.gov/data-nonspatial-harvest.json</li>
+        <li>If an agency has a geospatial dataset in the data-nonspatial-harvest.json that should be part of GeoPlatform.gov but is not included in the CSW harvest source, it should include “geospatial” as a value for the “theme” field.</li>
+      </ul>    
     </section>
 
     <section class="slide">
-      <h2>Geospatial Harvest Source</h2>
-      <ul>
-        <li>Geospatial metadata should be provided through a consolidated geospatial harvest source, preferably a single CSW endpoint for the entire department</li>
-        <li>Any metadata that is not made available through this geospatial harvest source should be made available a a JSON file. This should be separate from the main data.json file and not include any datasets provided through the geospatial harvest source. This file should be made available at data.gov/data-nonspatial-harvest.json</li>
-        <li>If an agency has a geospatial dataset in the data-nonspatial-harvest.json that should be part of geoplatform.gov but is not included in the CSW harvest source, it should be include “geospatial” as a value for the “theme” field.</li>
-      </ul>    
+      <img src="images/harvest-diagram-partial.png" alt="harvesting diagram">
+    </section>
+
+
+    <section class="slide">
+      <img src="images/harvest-diagram.png" alt="harvesting diagram">
     </section>
 
 
