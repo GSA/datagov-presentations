@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>Data.gov</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" media="screen" href="core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/style/swiss.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="core/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="modernizr.custom.js"></script>
+</head>
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+
+    <section class="slide">
+        <div class="center">
+          <h2 class="title-slide">Open With Apps<h2>
+          <h3>CKANcon 2015 Ottawa</h3>
+          <h4>Phil Ashlock, Data.gov</h4>
+        </div>
+    </section>
+
+
+    <section class="slide">
+      <div class="center">
+        <img style="width : 90%" src="./images/logo-with-flag.svg" alt="data.gov logo">
+      </div>
+    </section>
+
+    
+    <section class="slide">
+      <img src="./images/datagov-presentation.png" alt="data.gov screenshot">
+    </section>
+
+    <section class="slide">
+      <img src="./images/before-after.png" alt="data.gov screenshot">
+    </section>
+
+
+
+    <section class="slide">
+      <h2>Data.gov CKAN Status</h2>
+      <pre style="font-size : .5em">
+          {
+              "ckan_version": "2.1a",
+              "site_url": "http://catalog.data.gov",
+              "site_description": "",
+              "site_title": "Data.gov",
+              "error_emails_to": "datagovhelp@gsa.gov",
+              "locale_default": "en",
+              "extensions": [
+                  "geodatagov",
+                  "datagov_harvest",
+                  "geodatagov_geoportal_harvester",
+                  "z3950_harvester",
+                  "arcgis_harvester",
+                  "waf_harvester_collection",
+                  "geodatagov_csw_harvester",
+                  "geodatagov_doc_harvester",
+                  "geodatagov_waf_harvester",
+                  "spatial_metadata",
+                  "spatial_query",
+                  "resource_proxy",
+                  "spatial_harvest_metadata_api",
+                  "recline_preview",
+                  "pdf_preview",
+                  "googleanalytics",
+                  "saml2",
+                  "datajson",
+                  "datajson_harvest",
+                  "archiver",
+                  "qa",
+                  "ckan_harvester",
+                  "report",
+                  "broken_link_report"
+              ]
+
+          }
+      </pre>
+    </section>
+
+
+    <section class="slide">
+      <a href="http://catalog.data.gov/dataset/alternative-fueling-station-locations-b550c#topic=meta_navigation"><img width="100%" alt="open-with-datagov" src="./images/open-with-datagov.png"></a>
+    </section>
+
+    <section class="slide">       
+      <div class="center">
+      <a href="http://catalog.data.gov/dataset/alternative-fueling-station-locations-b550c#topic=meta_navigation"><h2>Plotly Demo</h2></a></div>
+    </section> 
+
+    <section class="slide">
+      <img width="100%" alt="plotly" src="./images/plotly.png">
+    </section>    
+
+    <section class="slide">       
+      <div class="center">
+      <h2>CartoDB Demo</h2></div>
+    </section> 
+
+    <section class="slide">
+      <img alt="CartoDB Data.gov" src="./images/data-gov.58319dac.gif">
+    </section>
+        
+    <section class="slide">
+      <h2>Background</h2>
+        <ul>
+          <li>How this works - Links! No extension yet</li>
+          <li>Integration without Integration</li>
+          <li>User accounts managed by third party service</li>
+          <li>How we worked with partners - outreach, legal</li>
+          <li>Experimentation with Chrome extension</li>
+        </ul>
+    </section>  
+
+    <section class="slide">
+      <h2>Additional Considerations</h2>
+        <ul>
+          <li>Metadata quality - correct formats</li>
+          <li>File size limits</li>
+        </ul>
+    </section>      
+              
+    <section class="slide">
+      <h2>What Could Be</h2>
+        <ul>
+          <li>Datastore integration. Example of Excel plugin</li>
+          <li>Integration with other APIs. Precedent with geospatial</li>
+          <li>Standards and domain specific apps - indentify standards in metadata</li>
+        </ul>
+    </section> 
+
+    <section class="slide">
+      <h2>What's Next</h2>
+        <ul>
+          <li>Package as an extension</li>
+          <li>Define a spec that all platforms can implement</li>
+          <li>Share application and file format profiles. Publish registry</li>
+        </ul>
+    </section>     
+
+
+    <section class="slide">
+      <h2>Hack this presentation!</h2>
+        <ul>
+          <li>View online: <a href="http://gsa.github.io/datagov-presentations/CKANcon/">http://gsa.github.io/datagov-presentations/CKANcon/</a></li>
+          <li>Github: <a href="https://github.com/gsa/datagov-presentations/tree/gh-pages">Submit pull requests / Add issues</a></li>          
+        </ul>      
+    </section>
+
+
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="jquery.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>
